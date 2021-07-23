@@ -1,4 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import checked from "../image/checked.png";
+import dlete from "../image/delete.png";
 
 function Todo({ text, setTodos, todos, todo }) {
 	const deletehandler = () => {
@@ -25,8 +28,12 @@ function Todo({ text, setTodos, todos, todo }) {
 			<li className={`todo-item ${todo.complete ? "completed" : ""}`}>
 				{text}
 			</li>
-			<button onClick={completeHandler} className="complete-btn"></button>
-			<button onClick={deletehandler} className="trash-btn"></button>
+			<button onClick={completeHandler} className="complete-btn">
+				<img className="btn-img" src={checked} />
+			</button>
+			<button onClick={deletehandler} className="trash-btn">
+				<img className="btn-img" src={dlete} />
+			</button>
 		</div>
 	);
 }

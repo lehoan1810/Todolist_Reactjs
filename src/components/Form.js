@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-
+import add from "../image/add.png";
 import "../App.css";
 function Form({ setInputText, setTodos, todos, inputText, setStatus }) {
 	const inputTextHandler = (e) => {
@@ -26,11 +27,9 @@ function Form({ setInputText, setTodos, todos, inputText, setStatus }) {
 				type="text"
 				className="todo-input"
 			/>
-			<button
-				onClick={submitHandler}
-				className="todo-button"
-				type="submit"
-			></button>
+			<button onClick={submitHandler} className="todo-button" type="submit">
+				<img className="sub-img" src={add} />
+			</button>
 			<div className="select">
 				<select onChange={statusHandler} name="todos" className="filter-todo">
 					<option value="all">All</option>
